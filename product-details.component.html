@@ -1,0 +1,36 @@
+<table *ngFor="let product of productlist">
+    <h2>Products Purchased</h2>
+    <tr>
+        <td>Product Name</td>
+        <td>{{product.Product_Name}}</td>
+    </tr>
+    <tr>
+        <td>Amount</td>
+        <td>{{product.Amount}}</td>
+    </tr>
+    <tr>
+        <td>Paid</td>
+        <td>{{product.Paid}}</td>
+    </tr>
+    <tr>
+        <td>Balance</td>
+        <td>{{product.Balance}}</td>
+    </tr>
+</table>
+<h3>Recent Transactions</h3>
+<table>
+    <thead>
+    <tr>
+        <th>Product</th>
+        <th>Date</th>
+        <th>Amount Paid</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of productlist">
+            <td>{{product.Product_Name}}</td>
+            <td>{{product.Date}}</td>
+            <td>{{product.Amount_Paid}}</td>
+        </tr>
+    </tbody>
+</table>
